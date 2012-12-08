@@ -14,23 +14,23 @@ here is waht goes into database.yml
 Set appropriate ENV vars DB2_*
 
 
-<%= ENV["RAILS_ENV"] || ENV["RACK_ENV"] %>:
-  <%= attribute "adapter",  adapter %>
-  <%= attribute "database", database %>
-  <%= attribute "username", username %>
-  <%= attribute "password", password, true %>
-  <%= attribute "host",     host %>
-  <%= attribute "port",     port %>
+    <%= ENV["RAILS_ENV"] || ENV["RACK_ENV"] %>:
+      <%= attribute "adapter",  adapter %>
+      <%= attribute "database", database %>
+      <%= attribute "username", username %>
+      <%= attribute "password", password, true %>
+      <%= attribute "host",     host %>
+      <%= attribute "port",     port %>
 
-<% params.each do |key, value| %>
-  <%= key %>: <%= value.first %>
-<% end %>
-  <%= ENV['DB2_TOKEN'] %>:
-        adapter: <%= ENV['DB2_ADAPTER'] || 'mysql2'%>
-        database: <%= ENV['DB2_DBNAME'] %>
-        username: <%= ENV['DB2_USERNAME'] %>
-        password: <%= ENV['DB2_PASSWORD'] %>
-        host: <%= ENV['DB2_HOST'] %>
+    <% params.each do |key, value| %>
+      <%= key %>: <%= value.first %>
+    <% end %>
+      <%= ENV['DB2_TOKEN'] %>:
+            adapter: <%= ENV['DB2_ADAPTER'] || 'mysql2'%>
+            database: <%= ENV['DB2_DBNAME'] %>
+            username: <%= ENV['DB2_USERNAME'] %>
+            password: <%= ENV['DB2_PASSWORD'] %>
+            host: <%= ENV['DB2_HOST'] %>
 
 ### Set Buildpack URL
 
