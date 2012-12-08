@@ -443,6 +443,7 @@ ERROR
     log("create_database_yml") do
       return unless File.directory?("config")
       topic("Writing config/database.yml to read from DATABASE_URL")
+      topic("Including secondary database for db-charmer see https://github.com/joshco/heroku-buildpack-ruby")
       File.open("config/database.yml", "w") do |file|
         file.puts <<-DATABASE_YML
 <%
