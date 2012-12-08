@@ -498,6 +498,14 @@ params = CGI.parse(uri.query || "")
 <% params.each do |key, value| %>
   <%= key %>: <%= value.first %>
 <% end %>
+  <%= ENV['DB2_TOKEN'] %>:
+        adapter: <%= ENV['DB2_ADAPTER'] || 'mysql2'%>
+        database: <%= ENV['DB2_DBNAME'] %>
+        username: <%= ENV['DB2_USERNAME'] %>
+        password: <%= ENV['DB2_PASSWORD'] %>
+        host: <%= ENV['DB2_HOST'] %>
+
+
         DATABASE_YML
       end
     end
