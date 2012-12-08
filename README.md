@@ -4,6 +4,11 @@ heroku-buildpack-ruby
 
 my buildpack for rails db-charmer
 
+Usage
+-----
+
+### Environment Variable
+
 to include  a second database for db-charmer, user this buildpack
 here is waht goes into database.yml
 Set appropriate ENV vars DB2_*
@@ -26,6 +31,10 @@ Set appropriate ENV vars DB2_*
         username: <%= ENV['DB2_USERNAME'] %>
         password: <%= ENV['DB2_PASSWORD'] %>
         host: <%= ENV['DB2_HOST'] %>
+
+### Set Buildpack URL
+
+heroku config:set BUILDPACK_URL=git://github.com/joshco/heroku-buildpack-ruby.git
 
 
 Heroku buildpack: Ruby
